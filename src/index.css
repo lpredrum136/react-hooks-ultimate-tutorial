@@ -5,11 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(48, 42, 42);
 }
 
 .App {
-  background: rgb(7, 7, 7);
+  background: rgb(135, 227, 255);
   color: white;
   margin: 20px auto;
   width: 90%;
@@ -22,7 +21,7 @@ body {
 }
 
 .todo-list li {
-  background: rgb(71, 71, 71);
+  background: rgb(0, 56, 94);
   padding: 10px;
   cursor: pointer;
   margin: 10px 0;
