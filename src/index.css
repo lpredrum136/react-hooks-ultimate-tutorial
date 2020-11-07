@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(48, 42, 42);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  background: rgb(7, 7, 7);
+  color: white;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.todo-list ul {
+  padding: 5px 10px;
+  list-style-type: none;
+}
+
+.todo-list li {
+  background: rgb(71, 71, 71);
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+  border-radius: 4px;
 }
