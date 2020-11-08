@@ -13,13 +13,17 @@ const Todos = () => {
     setTodos([...todos, todo])
   }
 
+  const deleteTodo = id => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
+
   return (
     <div className='todo-list'>
       <TodoForm addTodo={addTodo} />
 
       <ul>
         {todos.map(todo => (
-          <TodoItem key={todo.id} todo={todo} />
+          <TodoItem key={todo.id} todo={todo} deleteTodo={deleteTodo} />
         ))}
       </ul>
     </div>
