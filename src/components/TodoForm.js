@@ -1,11 +1,14 @@
 import React, { useState, useContext } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { ThemeContext } from '../contexts/ThemeContext'
+import { TodoContext } from '../contexts/TodoContext'
 
-const TodoForm = ({ addTodo }) => {
+const TodoForm = () => {
   // Load context
   const { theme } = useContext(ThemeContext)
   const { isLightTheme, light, dark } = theme
+
+  const { addTodo } = useContext(TodoContext)
 
   const [title, setTitle] = useState('')
 
