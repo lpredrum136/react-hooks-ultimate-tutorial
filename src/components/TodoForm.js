@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 const TodoForm = ({ addTodo }) => {
+  // Load context
+  const { theme } = useContext(ThemeContext)
+  const { isLightTheme, light, dark } = theme
+
   const [title, setTitle] = useState('')
 
   const onTitleChange = event => {
@@ -27,7 +32,7 @@ const TodoForm = ({ addTodo }) => {
         value={title}
         required
       />
-      <input type='submit' value='Add' />
+      <input type='submit' value='Add' style={isLightTheme ? light : dark} />
     </form>
   )
 }

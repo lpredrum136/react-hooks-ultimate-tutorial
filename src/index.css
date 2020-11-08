@@ -8,11 +8,23 @@ body {
 }
 
 .App {
-  background: rgb(135, 227, 255);
-  color: white;
+  background: rgb(219, 219, 219);
   margin: 20px auto;
   width: 90%;
   max-width: 800px;
+}
+
+.navbar {
+  padding: 5px;
+  text-align: center;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
 }
 
 .todo-list ul {
@@ -21,7 +33,6 @@ body {
 }
 
 .todo-list li {
-  background: rgb(0, 56, 94);
   padding: 10px;
   cursor: pointer;
   margin: 10px 0;
@@ -48,8 +59,11 @@ input[type='text'] {
 input[type='submit'] {
   margin: 10px auto;
   padding: 10px;
-  background: rgb(0, 56, 94);
-  color: white;
   border: 0;
   display: block;
+}
+
+.toggle-btn {
+  text-align: center;
+  padding-bottom: 10px;
 }
