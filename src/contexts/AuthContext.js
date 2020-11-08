@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 
 export const AuthContext = createContext()
 
@@ -9,6 +9,11 @@ const AuthContextProvider = ({ children }) => {
   const toggleAuth = () => {
     setAuthentication(!isAuthenticated)
   }
+
+  // useEffect
+  useEffect(() => {
+    alert(isAuthenticated ? 'Login successful' : 'Logout successful')
+  }, [isAuthenticated])
 
   // Context Data
   const authContextData = {
